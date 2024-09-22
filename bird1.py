@@ -86,11 +86,11 @@ def determine_back_color(parent1_back, parent2_back):
 def interpret_back_genotype(genotype):
     if 'G' in genotype:
         if 'Y' in genotype:
-            return "黃色背部"
+            return "黃背"
         else:
             return "綠背"
     elif 'Y' in genotype:
-        return "黃色背部"
+        return "黃背"
     elif genotype == 'bb':
         return "藍背"
     else:
@@ -125,7 +125,7 @@ def apply_gene_interactions(sex, head, back):
             return "鮭魚色"  # 藍背壓制紅頭和橘頭
     if '黃色背部' in back:
         if head == "黑頭":
-            return "黃色頭部"  # 黃色背部壓制黑頭
+            return "黃頭"  # 黃色背部壓制黑頭
     return head
 
 def calculate_offspring(parent1, parent2):
